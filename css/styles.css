@@ -23,6 +23,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -117,12 +119,25 @@ p {
   margin-left: auto;
 }
 
+.contact-link {
+  display: flex;
+  color: var(--primary-text-color);
+}
+
 .contact-list .contact-item + .contact-item {
   margin-left: 50px;
 }
 
-.contact-link {
-  color: var(--primary-text-color);
+.icon-envelope {
+  align-self: center;
+  margin-right: 10px;
+  /* color: currentColor; */
+}
+
+.icon-mobile {
+  align-self: center;
+  margin-right: 10px;
+  color: currentColor;
 }
 
 .contact-link:hover,
@@ -133,9 +148,18 @@ p {
 /* Hero */
 
 .section-hero {
+  max-width: 1600px;
+  max-height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/overlay/overlay.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 200px;
   padding-bottom: 200px;
+
   background-color: #2f303a;
+
   text-align: center;
 }
 
@@ -203,6 +227,34 @@ p {
 .features-item {
   width: 270px;
   margin-right: 30px;
+}
+
+.features-item::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-color-section);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icons/icon-antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/icon-clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icons/icon-diagram.svg);
+}
+
+.icon-astonaut::before {
+  background-image: url(../images/icons/icon-astanaut.svg);
 }
 
 .features-item:last-of-type {
@@ -281,7 +333,7 @@ p {
 }
 
 .team-img {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .team-subtitle {
@@ -293,7 +345,7 @@ p {
 }
 
 .team-text {
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 
   color: var(--primary-text-color);
 
