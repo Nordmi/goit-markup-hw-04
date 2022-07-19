@@ -131,13 +131,13 @@ p {
 .icon-envelope {
   align-self: center;
   margin-right: 10px;
-  /* color: currentColor; */
+  fill: currentColor;
 }
 
 .icon-mobile {
   align-self: center;
   margin-right: 10px;
-  color: currentColor;
+  fill: currentColor;
 }
 
 .contact-link:hover,
