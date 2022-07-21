@@ -6,6 +6,9 @@
   --background-color-section: #f5f4fa;
   --color-icon: #afb1b8;
   --main-font-size-14px: 14px;
+  --background-color-overlay: #c4c4c4;
+  --background-icon-footer: rgba(255, 255, 255, 0.1);
+  --color-address-link-footer: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -145,16 +148,16 @@ p {
 
 .section-hero {
   max-width: 1600px;
-  max-height: 600px;
   margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/overlay/overlay.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: #2f303a;
+  background-color: var(--background-color-overlay);
 
   text-align: center;
 }
@@ -354,7 +357,7 @@ p {
 }
 
 .team-img {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .team-subtitle {
@@ -372,6 +375,39 @@ p {
 
   font-size: 16px;
   text-align: center;
+}
+
+/* Social network icon in section team */
+
+.social-network-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.social-network-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-network-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-icon);
+}
+
+.social-network-link:hover,
+.social-network-link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.social-network-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* Our clients */
@@ -498,6 +534,7 @@ p {
 }
 
 .address {
+  display: flex;
   font-style: normal;
 }
 
@@ -518,7 +555,7 @@ p {
 .address .nav-link {
   padding-top: 0;
   padding-bottom: 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-address-link-footer);
 
   font-weight: inherit;
   letter-spacing: 0.03em;
@@ -527,4 +564,47 @@ p {
 .address .nav-link:hover,
 .address .nav-link:focus {
   color: var(--accent-color);
+}
+
+/* Social network icon in footer  */
+
+.title-footer {
+  color: var(--primary-white-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.address-wrapper {
+  margin-right: 70px;
+}
+
+.icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-network-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--primary-white-color);
+  background-color: var(--background-icon-footer);
+  border-radius: 50%;
+}
+
+.social-network-link-footer:hover,
+.social-network-link-footer:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
