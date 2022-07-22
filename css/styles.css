@@ -384,6 +384,10 @@ p {
   justify-content: center;
 }
 
+.social-network-list-team {
+  padding-bottom: 30px;
+}
+
 .social-network-item:not(:last-child) {
   margin-right: 10px;
 }
